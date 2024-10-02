@@ -1,7 +1,5 @@
-# ㅤㅤㅤㅤㅤ**PINTERES SCRAPPER**
-
+# ㅤㅤㅤㅤㅤㅤㅤㅤ**PINTERES SCRAPPER**
 ------------
-
 **Requiere**
 ```bash
 npm i puppeteer
