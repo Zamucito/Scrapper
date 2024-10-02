@@ -5,7 +5,7 @@ const generateUniqueId = () => {
   return `img-${Date.now()}-${Math.floor(Math.random() * 10000)}`;
 };
 
-const dbFilePath = 'image_db.json';
+const dbFilePath = 'db.json';
 let results = { images: [] };
 if (fs.existsSync(dbFilePath)) {
   results = JSON.parse(fs.readFileSync(dbFilePath, 'utf-8'));
@@ -13,7 +13,7 @@ if (fs.existsSync(dbFilePath)) {
 }
 
 (async () => {
-  const pinterestUrl = `https://es.pinterest.com/zamucito83/pfp/`;
+  const pinterestUrl = `https://es.pinterest.com/zamucito83/pfp/`;  // replace with the link from your pinterest board
 
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
@@ -93,5 +93,5 @@ if (fs.existsSync(dbFilePath)) {
 
   fs.writeFileSync(dbFilePath, JSON.stringify(results, null, 2), 'utf-8');
 
-  console.log(`Scraping completado. Total de imágenes en image_db.json: ${results.images.length}`);
+  console.log(`Scraping completed: ${results.images.length}`);
 })();
