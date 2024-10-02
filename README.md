@@ -1,2 +1,11 @@
-# Scrapper
-PINTEREST IMG SCRAPPER
+# ㅤㅤㅤㅤㅤ**PINTERES SCRAPPER**
+
+------------
+
+**Requiere**
+```bash
+npm i puppeteer
+npm i fs
+```
+
+
